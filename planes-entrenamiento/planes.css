@@ -1,0 +1,884 @@
+
+/* =========================================
+   1. VARIABLES Y CONFIGURACIÓN GENERAL
+========================================= */
+
+:root {
+    --ink: #171a19;
+    --deep: #303936;
+    --lime: #c6f36b;
+    --cream: #f4f4ef;
+    --muted: #68716d;
+    --line: #d4d6cf;
+    --round: 24px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font: 16px/1.5 'DM Sans', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* =========================================
+   2. CONTENEDORES Y ACCESIBILIDAD
+========================================= */
+
+.shell {
+    width: min(1180px, calc(100% - 48px));
+    margin: auto;
+}
+
+.skip {
+    position: absolute;
+    left: -999px;
+}
+
+.skip:focus {
+    left: 16px;
+    top: 16px;
+    z-index: 5;
+    background: var(--lime);
+    padding: 10px;
+}
+
+.sr {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+
+/* =========================================
+   3. HEADER Y NAVEGACIÓN
+========================================= */
+
+header {
+    width: min(1280px, calc(100% - 48px));
+    height: 86px;
+    margin: auto;
+    border-bottom: 1px solid var(--line);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    font: 700 1rem 'Space Grotesk', sans-serif;
+    letter-spacing: -.06em;
+}
+
+.brand b {
+    display: grid;
+    place-items: center;
+
+    width: 34px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+
+    background: var(--ink);
+    color: var(--lime);
+    font-size: .68rem;
+}
+
+.brand span {
+    color: var(--muted);
+}
+
+header nav {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+
+    font-size: .88rem;
+    font-weight: 700;
+}
+
+
+/* Botones */
+
+.pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px 18px;
+    border: 1px solid transparent;
+    border-radius: 99px;
+
+    font-size: .88rem;
+    font-weight: 700;
+
+    transition: .2s;
+}
+
+.pill:hover {
+    transform: translateY(-2px);
+}
+
+.dark {
+    background: var(--ink);
+    color: var(--cream);
+}
+
+.lime {
+    background: var(--lime);
+}
+
+.outline {
+    border-color: currentColor;
+}
+
+.outline:hover {
+    background: var(--cream);
+    color: var(--ink);
+}
+
+
+/* Menú móvil */
+
+.menu {
+    display: none;
+    background: none;
+    border: 0;
+}
+
+.menu i {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px;
+    background: var(--ink);
+}
+
+
+/* =========================================
+   4. TIPOGRAFÍA GENERAL
+========================================= */
+
+h1,
+h2,
+h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: .96;
+    letter-spacing: -.07em;
+}
+
+h1 {
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    margin: 0 0 25px;
+}
+
+h2 {
+    font-size: clamp(2.7rem, 5vw, 4.7rem);
+    margin: 0 0 20px;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin: 0 0 10px;
+}
+
+em {
+    color: #769d28;
+    font-style: normal;
+}
+
+.eyebrow {
+    margin: 0 0 16px;
+
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+
+    color: #63822c;
+}
+
+
+/* =========================================
+   5. HERO SECTION
+========================================= */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 64px;
+
+    padding: 72px 0 88px;
+}
+
+.lead {
+    max-width: 470px;
+    font-size: 1.1rem;
+    color: #4c5551;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin: 32px 0;
+}
+
+.line {
+    font-size: .9rem;
+    font-weight: 700;
+    border-bottom: 1px solid;
+}
+
+.notes {
+    color: var(--muted);
+    font-size: .76rem;
+    margin-top: 60px;
+}
+
+
+/* Imagen principal */
+
+.hero-img {
+    position: relative;
+    height: 500px;
+}
+
+.hero-img img {
+    border-radius: var(--round);
+}
+
+aside {
+    position: absolute;
+    right: -20px;
+    bottom: 28px;
+
+    padding: 15px 18px;
+    border-radius: 16px;
+
+    background: var(--ink);
+    color: var(--cream);
+
+    font-size: .72rem;
+    line-height: 1.2;
+}
+
+aside strong {
+    font: 2rem 'Space Grotesk';
+    color: var(--lime);
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+
+/* =========================================
+   6. SECCIÓN DE ENFOQUES
+========================================= */
+
+.section {
+    padding: 82px 0;
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    align-items: end;
+    gap: 30px;
+
+    margin-bottom: 38px;
+}
+
+.intro > p {
+    max-width: 390px;
+    color: var(--muted);
+}
+
+
+/* Tarjetas de enfoques */
+
+.approaches,
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.approach {
+    position: relative;
+
+    min-height: 375px;
+    padding: 22px;
+    border-radius: var(--round);
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.approach img {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.approach > *:not(img) {
+    position: relative;
+    z-index: 1;
+}
+
+.approach p {
+    margin: 0;
+    font-size: .86rem;
+    line-height: 1.35;
+}
+
+.approach small {
+    font-weight: 700;
+}
+
+
+/* Fondos de las tarjetas */
+
+.lime-bg {
+    background: var(--lime);
+}
+
+.dark-bg {
+    background: var(--deep);
+    color: var(--cream);
+}
+
+.pale-bg {
+    background: #e0e4db;
+}
+
+.photo {
+    color: white;
+}
+
+.photo:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, .8)
+    );
+}
+
+
+/* =========================================
+   7. SECCIÓN DE PLANES
+========================================= */
+
+.plans {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 92px 0;
+}
+
+.plans .eyebrow,
+.plans em {
+    color: var(--lime);
+}
+
+.plans-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+
+    margin-bottom: 40px;
+}
+
+.plans-head > p {
+    max-width: 370px;
+    color: #b8c1bc;
+}
+
+
+/* Tarjetas de planes */
+
+.card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 470px;
+    padding: 24px;
+
+    border: 1px solid #4a5450;
+    border-radius: var(--round);
+}
+
+.card > small {
+    color: #aab4ae;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    margin-bottom: 42px;
+}
+
+.card > p {
+    color: #bec7c2;
+    font-size: .86rem;
+    min-height: 65px;
+}
+
+
+/* Información de cada plan */
+
+.card dl {
+    border-block: 1px solid #59635e;
+    margin: 12px 0 18px;
+    padding: 10px 0;
+    font-size: .77rem;
+}
+
+.card dl div {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.card dt {
+    color: #aab4ae;
+}
+
+.card dd {
+    margin: 0;
+    font-weight: 700;
+    text-align: right;
+}
+
+
+/* Lista de características */
+
+.card ul {
+    padding: 0;
+    margin: 0 0 25px;
+    list-style: none;
+    flex: 1;
+
+    font-size: .8rem;
+}
+
+.card li {
+    margin: 8px 0;
+}
+
+.card li:before {
+    content: '✓';
+    color: var(--lime);
+    margin-right: 8px;
+}
+
+
+/* Plan destacado */
+
+.selected {
+    background: var(--lime);
+    color: var(--ink);
+    border-color: var(--lime);
+}
+
+.selected > small,
+.selected > p,
+.selected dt {
+    color: #455723;
+}
+
+.selected li:before {
+    color: var(--ink);
+}
+
+mark {
+    position: absolute;
+    right: 18px;
+    top: 18px;
+
+    padding: 5px 9px;
+    border-radius: 30px;
+
+    background: var(--ink);
+    color: var(--lime);
+
+    font-size: .62rem;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   8. TABLA COMPARATIVA
+========================================= */
+
+.simple {
+    display: block;
+}
+
+.scroll {
+    overflow: auto;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+}
+
+table {
+    width: 100%;
+    min-width: 690px;
+
+    border-collapse: collapse;
+    text-align: left;
+
+    font-size: .86rem;
+}
+
+caption {
+    padding: 16px;
+    text-align: left;
+
+    text-transform: uppercase;
+    letter-spacing: .08em;
+
+    font-size: .72rem;
+    font-weight: bold;
+
+    color: var(--muted);
+}
+
+th,
+td {
+    padding: 16px;
+    border-top: 1px solid var(--line);
+}
+
+thead {
+    background: #e5e7e0;
+    font-family: 'Space Grotesk';
+}
+
+td {
+    color: var(--muted);
+}
+
+
+/* =========================================
+   9. GALERÍA DE IMÁGENES
+========================================= */
+
+.gallery > div:first-child {
+    margin-bottom: 30px;
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    grid-template-rows: 240px;
+    gap: 16px;
+}
+
+.photos figure {
+    position: relative;
+    overflow: hidden;
+
+    border-radius: var(--round);
+    margin: 0;
+}
+
+.photos img {
+    transition: transform .5s;
+}
+
+.photos figure:hover img {
+    transform: scale(1.04);
+}
+
+figcaption {
+    position: absolute;
+    inset: auto 0 0;
+
+    padding: 48px 20px 18px;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, .8)
+    );
+
+    color: white;
+    font-family: 'Space Grotesk';
+}
+
+
+/* =========================================
+   10. SECCIÓN DE CONTACTO
+========================================= */
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 32px;
+
+    padding: 60px 0;
+}
+
+.contact > div:last-child {
+    background: #dfe3da;
+    border-radius: var(--round);
+    padding: 32px;
+}
+
+.contact .pill {
+    margin: 8px 0 15px;
+}
+
+.contact small {
+    display: block;
+    color: #5c665f;
+    font-size: .78rem;
+}
+
+
+/* =========================================
+   11. FOOTER
+========================================= */
+
+footer {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr auto;
+    gap: 28px;
+
+    border-top: 1px solid var(--line);
+    padding: 48px 0 32px;
+}
+
+footer p {
+    font-size: .8rem;
+    color: var(--muted);
+    max-width: 280px;
+}
+
+footer nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    font-size: .85rem;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   12. RESPONSIVE - TABLETS
+========================================= */
+
+@media (max-width: 900px) {
+
+    .approaches,
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .photos {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 220px 180px;
+    }
+
+    .photos .big {
+        grid-row: span 2;
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero {
+        gap: 35px;
+    }
+
+}
+
+
+/* =========================================
+   13. RESPONSIVE - MÓVILES
+========================================= */
+
+@media (max-width: 650px) {
+
+    .shell,
+    header {
+        width: calc(100% - 32px);
+    }
+
+    header {
+        height: 70px;
+    }
+
+    /* Menú móvil */
+
+    .menu {
+        display: block;
+    }
+
+    .menu + nav {
+        display: none;
+
+        position: absolute;
+        top: 70px;
+        left: 16px;
+        right: 16px;
+        z-index: 3;
+
+        background: var(--cream);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 10px;
+
+        box-shadow: 0 15px 30px #0002;
+    }
+
+    .menu + nav.open {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .menu + nav a {
+        padding: 11px;
+    }
+
+
+    /* Distribución principal */
+
+    .hero,
+    .contact {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 50px 0;
+    }
+
+    .hero-img {
+        height: 360px;
+    }
+
+    .notes {
+        margin-top: 35px;
+    }
+
+
+    /* Encabezados */
+
+    .intro,
+    .plans-head {
+        display: block;
+    }
+
+    .intro > p,
+    .plans-head > p {
+        margin-top: 20px;
+    }
+
+
+    /* Secciones */
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .approaches,
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .approach {
+        min-height: 300px;
+    }
+
+    .plans {
+        padding: 60px 0;
+    }
+
+
+    /* Tarjetas */
+
+    .card {
+        min-height: 0;
+    }
+
+    .card > p {
+        min-height: 0;
+    }
+
+
+    /* Galería */
+
+    .photos {
+        grid-template-rows: 190px 155px;
+    }
+
+
+    /* Contacto */
+
+    .contact > div:last-child {
+        padding: 24px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        display: block;
+    }
+
+    footer nav {
+        margin-top: 25px;
+    }
+
+    footer > p:last-child {
+        margin-top: 25px;
+    }
+
+}
+
+
+/* =========================================
+   14. ACCESIBILIDAD: MOVIMIENTO REDUCIDO
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+        transition: none !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+
+}
