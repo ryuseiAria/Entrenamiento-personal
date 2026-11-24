@@ -1,0 +1,199 @@
+
+.asesoria-nutricional {
+      color-scheme: light;
+      --forest: #173e32;
+      --forest-2: #225745;
+      --leaf: #628b55;
+      --lime: #d9e8b5;
+      --cream: #f7f8f1;
+      --paper: #fffefa;
+      --ink: #25352d;
+      --muted: #617067;
+      --line: #e4e9dc;
+      --accent: #e6b76c;
+      --shadow: 0 18px 50px rgb(29 60 45 / 9%);
+      --radius: 22px;
+      font-family: "Segoe UI", "Aptos", system-ui, -apple-system, sans-serif;
+      scroll-behavior: smooth;
+      scroll-padding-top: 92px;
+    }
+.asesoria-nutricional, .asesoria-nutricional *,
+.asesoria-nutricional *::before,
+.asesoria-nutricional *::after { box-sizing: border-box; }
+.asesoria-nutricional { margin: 0; background: var(--cream); color: var(--ink); line-height: 1.65; }
+.asesoria-nutricional a { color: inherit; }
+.asesoria-nutricional button,
+.asesoria-nutricional input,
+.asesoria-nutricional select,
+.asesoria-nutricional textarea { font: inherit; }
+.asesoria-nutricional button,
+.asesoria-nutricional a { -webkit-tap-highlight-color: transparent; }
+.asesoria-nutricional :focus-visible { outline: 3px solid #d29a43; outline-offset: 3px; }
+.asesoria-nutricional .skip-link { position: absolute; z-index: 20; top: 8px; left: 8px; padding: 10px 14px; transform: translateY(-150%); background: white; border-radius: 8px; }
+.asesoria-nutricional .skip-link:focus { transform: translateY(0); }
+.asesoria-nutricional .wrap { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+.asesoria-nutricional .site-header { position: sticky; z-index: 10; top: 0; background: rgb(255 254 250 / 92%); border-bottom: 1px solid rgb(228 233 220 / 85%); backdrop-filter: blur(14px); }
+.asesoria-nutricional .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.asesoria-nutricional .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--forest); text-decoration: none; font-weight: 800; letter-spacing: -.04em; font-size: 1.15rem; white-space: nowrap; }
+.asesoria-nutricional .brand-mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 13px; color: var(--forest); background: var(--lime); }
+.asesoria-nutricional .brand-mark svg { width: 23px; height: 23px; }
+.asesoria-nutricional .nav-links { display: flex; align-items: center; gap: clamp(14px, 2.3vw, 30px); list-style: none; padding: 0; margin: 0; }
+.asesoria-nutricional .nav-links a { color: var(--muted); text-decoration: none; font-size: .91rem; font-weight: 650; transition: color .2s ease; }
+.asesoria-nutricional .nav-links a:hover { color: var(--forest-2); }
+.asesoria-nutricional .nav-links .nav-home { color: var(--forest); }
+.asesoria-nutricional .menu-toggle { display: none; border: 1px solid var(--line); background: var(--paper); color: var(--forest); border-radius: 12px; padding: 8px 12px; font-weight: 700; cursor: pointer; }
+.asesoria-nutricional .hero { position: relative; overflow: hidden; padding: clamp(64px, 9vw, 112px) 0 88px; background: radial-gradient(ellipse at 86% 16%, rgb(217 232 181 / 57%), transparent 27%), linear-gradient(135deg, #f7f8f1 0%, #edf2e4 100%); }
+.asesoria-nutricional .hero::after { content: ""; position: absolute; width: 310px; height: 310px; right: -100px; bottom: -190px; border: 1px solid rgb(98 139 85 / 20%); border-radius: 50%; box-shadow: 0 0 0 28px rgb(98 139 85 / 4%), 0 0 0 58px rgb(98 139 85 / 3%); }
+.asesoria-nutricional .hero-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(260px, .7fr); align-items: center; gap: 48px; position: relative; z-index: 1; }
+.asesoria-nutricional .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--forest-2); font-size: .78rem; text-transform: uppercase; letter-spacing: .14em; font-weight: 800; }
+.asesoria-nutricional .eyebrow::before { content: ""; width: 23px; height: 2px; border-radius: 2px; background: var(--leaf); }
+.asesoria-nutricional h1,
+.asesoria-nutricional h2,
+.asesoria-nutricional h3,
+.asesoria-nutricional p { margin-top: 0; }
+.asesoria-nutricional h1 { max-width: 720px; margin: 18px 0; color: var(--forest); font-size: clamp(2.65rem, 6vw, 5rem); line-height: 1.04; letter-spacing: -.065em; }
+.asesoria-nutricional h1 em { color: var(--leaf); font-style: normal; }
+.asesoria-nutricional .hero-copy { max-width: 620px; color: var(--muted); font-size: clamp(1.02rem, 1.5vw, 1.18rem); }
+.asesoria-nutricional .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 13px; margin-top: 28px; }
+.asesoria-nutricional .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 48px; padding: 12px 19px; border: 1px solid transparent; border-radius: 12px; text-decoration: none; font-weight: 750; cursor: pointer; transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
+.asesoria-nutricional .button:hover { transform: translateY(-2px); }
+.asesoria-nutricional .button-primary { color: white; background: var(--forest); box-shadow: 0 8px 20px rgb(23 62 50 / 16%); }
+.asesoria-nutricional .button-primary:hover { background: var(--forest-2); }
+.asesoria-nutricional .button-secondary { color: var(--forest); background: rgb(255 254 250 / 72%); border-color: var(--line); }
+.asesoria-nutricional .button-secondary:hover { background: white; }
+.asesoria-nutricional .hero-note { max-width: 440px; margin: 20px 0 0; color: #77847b; font-size: .84rem; }
+.asesoria-nutricional .hero-card { position: relative; margin: 0; overflow: hidden; border: 1px solid rgb(255 255 255 / 85%); border-radius: 27px; background: var(--paper); box-shadow: var(--shadow); transform: rotate(1.5deg); }
+.asesoria-nutricional .hero-photo { display: block; width: 100%; aspect-ratio: 4 / 4.5; object-fit: cover; }
+.asesoria-nutricional .hero-card figcaption { padding: 11px 15px; color: var(--muted); font-size: .75rem; }
+.asesoria-nutricional .hero-card figcaption a,
+.asesoria-nutricional .plan-photo figcaption a { color: var(--forest-2); text-underline-offset: 2px; }
+.asesoria-nutricional .plan-photo { position: relative; aspect-ratio: 16 / 10; margin: 0 -26px 20px; overflow: hidden; border-radius: 21px 21px 0 0; background: #edf3e4; }
+.asesoria-nutricional .plan-photo img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+.asesoria-nutricional .plan-card:hover .plan-photo img { transform: scale(1.035); }
+.asesoria-nutricional .plan-photo figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 18px 12px 8px; color: white; background: linear-gradient(transparent, rgb(16 47 38 / 72%)); text-align: right; font-size: .68rem; }
+.asesoria-nutricional .plan-photo figcaption a { color: white; }
+.asesoria-nutricional section { padding: clamp(66px, 8vw, 96px) 0; }
+.asesoria-nutricional .section-heading { max-width: 700px; margin-bottom: 38px; }
+.asesoria-nutricional .section-heading h2 { margin: 12px 0 12px; color: var(--forest); font-size: clamp(2rem, 4vw, 3.15rem); line-height: 1.12; letter-spacing: -.05em; }
+.asesoria-nutricional .section-heading p { margin: 0; color: var(--muted); font-size: 1.03rem; }
+.asesoria-nutricional .basics { background: var(--paper); }
+.asesoria-nutricional .basics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.asesoria-nutricional .info-card { min-height: 210px; padding: 24px; border: 1px solid var(--line); border-radius: 18px; background: #fff; transition: transform .2s ease, box-shadow .2s ease; }
+.asesoria-nutricional .info-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgb(29 60 45 / 7%); }
+.asesoria-nutricional .icon { display: grid; place-items: center; width: 43px; height: 43px; margin-bottom: 17px; border-radius: 14px; color: var(--forest-2); background: #edf3e4; }
+.asesoria-nutricional .icon svg { width: 22px; height: 22px; }
+.asesoria-nutricional .info-card h3 { margin-bottom: 7px; color: var(--forest); font-size: 1.04rem; }
+.asesoria-nutricional .info-card p { margin: 0; color: var(--muted); font-size: .92rem; }
+.asesoria-nutricional .note { display: flex; gap: 13px; align-items: flex-start; margin-top: 24px; padding: 17px 20px; border-left: 3px solid var(--leaf); border-radius: 0 12px 12px 0; background: #f2f5e9; color: var(--muted); font-size: .9rem; }
+.asesoria-nutricional .note strong { color: var(--forest); }
+.asesoria-nutricional .sources { margin-top: 18px; color: var(--muted); font-size: .8rem; }
+.asesoria-nutricional .sources strong { color: var(--forest); }
+.asesoria-nutricional .sources a { color: var(--forest-2); text-underline-offset: 3px; }
+.asesoria-nutricional .plans { background: linear-gradient(180deg, #f7f8f1, #f1f4e9); }
+.asesoria-nutricional .plans-grid { display: grid; grid-template-columns: repeat(3, 1fr); align-items: stretch; gap: 18px; }
+.asesoria-nutricional .plan-card { display: flex; flex-direction: column; padding: 26px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); box-shadow: 0 10px 28px rgb(29 60 45 / 5%); }
+.asesoria-nutricional .plan-card.featured { border: 1px solid #a6bd8b; box-shadow: 0 16px 38px rgb(50 89 60 / 11%); }
+.asesoria-nutricional .plan-tag { align-self: flex-start; margin-bottom: 17px; padding: 5px 10px; border-radius: 999px; color: var(--forest-2); background: #edf3e4; font-size: .72rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
+.asesoria-nutricional .plan-card h3 { margin-bottom: 8px; color: var(--forest); font-size: 1.35rem; line-height: 1.2; letter-spacing: -.025em; }
+.asesoria-nutricional .plan-description { min-height: 72px; margin-bottom: 19px; color: var(--muted); font-size: .9rem; }
+.asesoria-nutricional .plan-objective { padding: 12px 14px; border-radius: 12px; color: var(--forest); background: #f3f5ed; font-size: .86rem; }
+.asesoria-nutricional .plan-objective strong { display: block; margin-bottom: 2px; font-size: .73rem; letter-spacing: .07em; text-transform: uppercase; }
+.asesoria-nutricional .plan-card h4 { margin: 20px 0 7px; color: var(--forest); font-size: .9rem; }
+.asesoria-nutricional .plan-card ul { margin: 0; padding-left: 19px; color: var(--muted); font-size: .85rem; }
+.asesoria-nutricional .plan-card li + li { margin-top: 5px; }
+.asesoria-nutricional .plan-card .button { width: 100%; margin-top: auto; }
+.asesoria-nutricional .meal-pattern { margin: 10px 0 23px; color: var(--muted); font-size: .84rem; }
+.asesoria-nutricional .menu-section { background: var(--paper); }
+.asesoria-nutricional .menu-layout { display: grid; grid-template-columns: .75fr 1.25fr; align-items: start; gap: 42px; }
+.asesoria-nutricional .menu-intro { position: sticky; top: 110px; }
+.asesoria-nutricional .menu-intro h2 { margin: 12px 0; color: var(--forest); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; letter-spacing: -.05em; }
+.asesoria-nutricional .menu-intro p { color: var(--muted); }
+.asesoria-nutricional .menu-list { display: grid; gap: 11px; }
+.asesoria-nutricional .meal { display: grid; grid-template-columns: 125px 1fr; gap: 16px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
+.asesoria-nutricional .meal-time { color: var(--leaf); font-size: .78rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+.asesoria-nutricional .meal h3 { margin: 0 0 4px; color: var(--forest); font-size: .98rem; }
+.asesoria-nutricional .meal p { margin: 0; color: var(--muted); font-size: .88rem; }
+.asesoria-nutricional .tips { color: white; background: var(--forest); }
+.asesoria-nutricional .tips .section-heading h2,
+.asesoria-nutricional .tips .section-heading p,
+.asesoria-nutricional .tips .eyebrow { color: white; }
+.asesoria-nutricional .tips .eyebrow::before { background: var(--lime); }
+.asesoria-nutricional .tips-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.asesoria-nutricional .tip { padding: 19px; border: 1px solid rgb(255 255 255 / 15%); border-radius: 16px; background: rgb(255 255 255 / 6%); }
+.asesoria-nutricional .tip b { display: block; margin-bottom: 7px; color: #dce9c8; }
+.asesoria-nutricional .tip p { margin: 0; color: rgb(255 255 255 / 78%); font-size: .85rem; }
+.asesoria-nutricional .contact { background: linear-gradient(180deg, #f1f4e9, #f7f8f1); }
+.asesoria-nutricional .contact-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; align-items: start; }
+.asesoria-nutricional .contact-copy h2 { margin: 12px 0; color: var(--forest); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; letter-spacing: -.05em; }
+.asesoria-nutricional .contact-copy p { color: var(--muted); }
+.asesoria-nutricional .contact-meta { margin-top: 24px; padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: rgb(255 254 250 / 80%); color: var(--muted); font-size: .88rem; }
+.asesoria-nutricional .contact-meta strong { color: var(--forest); }
+.asesoria-nutricional .contact-form { padding: clamp(22px, 4vw, 34px); border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); box-shadow: var(--shadow); }
+.asesoria-nutricional .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 17px; }
+.asesoria-nutricional .field { display: grid; gap: 6px; }
+.asesoria-nutricional .field.full { grid-column: 1 / -1; }
+.asesoria-nutricional .field label { color: var(--forest); font-size: .85rem; font-weight: 750; }
+.asesoria-nutricional .field input,
+.asesoria-nutricional .field select,
+.asesoria-nutricional .field textarea { width: 100%; padding: 12px 13px; border: 1px solid #dce3d7; border-radius: 10px; color: var(--ink); background: white; }
+.asesoria-nutricional .field textarea { min-height: 120px; resize: vertical; }
+.asesoria-nutricional .field input::placeholder,
+.asesoria-nutricional .field textarea::placeholder { color: #9aa59a; }
+.asesoria-nutricional .form-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 13px; margin-top: 19px; }
+.asesoria-nutricional .form-foot small { flex: 1 1 180px; color: var(--muted); font-size: .76rem; }
+.asesoria-nutricional .form-status { min-height: 25px; margin: 14px 0 0; color: var(--forest-2); font-size: .9rem; font-weight: 700; }
+.asesoria-nutricional .form-status.error { color: #9d3d31; }
+.asesoria-nutricional footer { padding: 40px 0 24px; color: rgb(255 255 255 / 77%); background: #102f26; }
+.asesoria-nutricional .footer-main { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 32px; padding-bottom: 30px; }
+.asesoria-nutricional .footer-brand { color: white; }
+.asesoria-nutricional .footer-copy { max-width: 330px; margin: 14px 0 0; font-size: .86rem; }
+.asesoria-nutricional footer h2 { margin-bottom: 11px; color: #dce9c8; font-size: .92rem; }
+.asesoria-nutricional .footer-links { display: grid; gap: 6px; list-style: none; padding: 0; margin: 0; font-size: .86rem; }
+.asesoria-nutricional .footer-links a { color: inherit; text-decoration: none; }
+.asesoria-nutricional .footer-links a:hover { color: white; text-decoration: underline; }
+.asesoria-nutricional .footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 18px; border-top: 1px solid rgb(255 255 255 / 15%); color: rgb(255 255 255 / 63%); font-size: .75rem; }
+.asesoria-nutricional .disclaimer { max-width: 600px; }
+    @media (max-width: 900px) {
+.asesoria-nutricional .hero-grid { grid-template-columns: 1fr minmax(240px, .7fr); gap: 25px; }
+.asesoria-nutricional .plans-grid { grid-template-columns: 1fr 1fr; }
+.asesoria-nutricional .plan-card:last-child { grid-column: 1 / -1; }
+.asesoria-nutricional .tips-grid { grid-template-columns: repeat(3, 1fr); }
+.asesoria-nutricional .basics-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 680px) {
+.asesoria-nutricional .wrap { width: min(100% - 32px, 540px); }
+.asesoria-nutricional .nav { min-height: 68px; }
+.asesoria-nutricional .menu-toggle { display: inline-flex; align-items: center; gap: 7px; }
+.asesoria-nutricional .nav-links { position: absolute; top: calc(100% + 1px); left: 0; right: 0; display: none; padding: 10px 20px 18px; border-bottom: 1px solid var(--line); background: var(--paper); box-shadow: 0 14px 20px rgb(29 60 45 / 7%); }
+.asesoria-nutricional .nav-links.open { display: grid; gap: 0; }
+.asesoria-nutricional .nav-links li a { display: block; padding: 10px 4px; }
+.asesoria-nutricional .hero { padding: 58px 0 70px; }
+.asesoria-nutricional .hero-grid { grid-template-columns: 1fr; }
+.asesoria-nutricional .hero-card { width: min(100%, 390px); margin: 13px auto 0; transform: none; }
+.asesoria-nutricional .plate { width: 220px; margin-block: 23px; }
+.asesoria-nutricional .basics-grid,
+.asesoria-nutricional .plans-grid { grid-template-columns: 1fr; }
+.asesoria-nutricional .plan-card:last-child { grid-column: auto; }
+.asesoria-nutricional .plan-description { min-height: auto; }
+.asesoria-nutricional .menu-layout,
+.asesoria-nutricional .contact-layout { grid-template-columns: 1fr; gap: 25px; }
+.asesoria-nutricional .menu-intro { position: static; }
+.asesoria-nutricional .meal { grid-template-columns: 1fr; gap: 3px; }
+.asesoria-nutricional .tips-grid { grid-template-columns: 1fr 1fr; }
+.asesoria-nutricional .footer-main { grid-template-columns: 1fr 1fr; }
+.asesoria-nutricional .footer-main > :first-child { grid-column: 1 / -1; }
+.asesoria-nutricional .footer-bottom { flex-direction: column; }
+    }
+    @media (max-width: 430px) {
+.asesoria-nutricional .actions .button { width: 100%; }
+.asesoria-nutricional .form-grid { grid-template-columns: 1fr; }
+.asesoria-nutricional .field.full { grid-column: auto; }
+.asesoria-nutricional .tips-grid { grid-template-columns: 1fr; }
+.asesoria-nutricional .footer-main { grid-template-columns: 1fr; }
+.asesoria-nutricional .footer-main > :first-child { grid-column: auto; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+.asesoria-nutricional, .asesoria-nutricional *,
+.asesoria-nutricional *::before,
+.asesoria-nutricional *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
